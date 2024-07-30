@@ -4,7 +4,7 @@ import numpy as np
 import io
 
 st.title('Aplikasi Penggabungan Simpanan dan Pinjaman')
-st.write("""1. Format file harus bernama dan menggunakan ekstensi csv di excelnya pilih save as *CSV UTF-8 berbatas koma atau coma delimited*, sehingga seperti ini : THC.csv, DbPinjaman.csv, DbSimpanan.csv""")
+st.write("""Gabungkan file simpanan dan pinjaman (yang sudah digabungkan dan pinjaman N/A""")
 
 uploaded_files = st.file_uploader("Unggah file Excel", accept_multiple_files=True, type=["xlsx"])
 
