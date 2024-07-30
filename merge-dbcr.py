@@ -26,9 +26,6 @@ if uploaded_files:
             'Db PSA', 'Cr PSA', 'Db PU', 'Cr PU', 'Db Total2', 'Cr Total2']], on='DUMMY', how='left')
     dfs_merged = dfs_merged.fillna(0)
 
-    dfs_merged['CENTER'] = dfs_merged['CENTER'].astype(str).str.zfill(3)
-    dfs_merged['KELOMPOK'] = dfs_merged['KELOMPOK'].astype(str).str.zfill(2)
-
 # Download links for pivot tables
     for name, df in {
         'THC FINAL.xlsx': dfs_merged
