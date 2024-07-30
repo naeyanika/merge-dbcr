@@ -17,8 +17,10 @@ if uploaded_files:
 
 
     # Konversi data menjadi DataFrame
-    df_s = pd.DataFrame(pivot_simpanan.xlsx)
-    df_p = pd.DataFrame(pivot_pinjaman.xlsx)
+    if 'pivot_simpanan.xlsx' in dfs:
+        df_s = dfs['pivot_simpanan.xlsx']
+    if 'pivot_pinjaman.xlsx' in dfs:
+        df_p = dfs['pivot_pinjaman.xlsx']
 
     dfs_merged = pd.merge(df_s, df_p[['DUMMY', 'Db PTN', 'Cr PTN', 'Db PRT', 'Cr PRT', 'Db DTP', 'Cr DTP', 'Db PMB', 'Cr PMB', 'Db PRR', 'Cr PRR',
             'Db PSA', 'Cr PSA', 'Db PU', 'Cr PU', 'Db Total2', 'Cr Total2']], on='DUMMY', how='left')
