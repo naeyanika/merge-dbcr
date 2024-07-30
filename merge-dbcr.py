@@ -26,6 +26,9 @@ if uploaded_files:
             'Db PSA', 'Cr PSA', 'Db PU', 'Cr PU', 'Db Total2', 'Cr Total2']], on='DUMMY', how='left')
     dfs_merged = dfs_merged.fillna(0)
 
+        st.write("THC Final setelah di proses:")
+        st.write(dfs_merged)
+
 # Download links for pivot tables
     for name, df in {
         'THC FINAL.xlsx': dfs_merged
