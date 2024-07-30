@@ -16,16 +16,16 @@ if uploaded_files:
 
 
 
-# Konversi data menjadi DataFrame
-df_s = pd.DataFrame(pivot_simpanan)
-df_p = pd.DataFrame(pivot_pinjaman)
+    # Konversi data menjadi DataFrame
+    df_s = pd.DataFrame(pivot_simpanan)
+    df_p = pd.DataFrame(pivot_pinjaman)
 
-dfs_merged = pd.merge(df_s, df_p[['DUMMY', 'Db PTN', 'Cr PTN', 'Db PRT', 'Cr PRT', 'Db DTP', 'Cr DTP', 'Db PMB', 'Cr PMB', 'Db PRR', 'Cr PRR',
+    dfs_merged = pd.merge(df_s, df_p[['DUMMY', 'Db PTN', 'Cr PTN', 'Db PRT', 'Cr PRT', 'Db DTP', 'Cr DTP', 'Db PMB', 'Cr PMB', 'Db PRR', 'Cr PRR',
             'Db PSA', 'Cr PSA', 'Db PU', 'Cr PU', 'Db Total2', 'Cr Total2']], on='DUMMY', how='left')
-dfs_merged = dfs_merged.fillna(0)
+    dfs_merged = dfs_merged.fillna(0)
 
-dfs_merged['CENTER'] = dfs_merged['CENTER'].astype(str).str.zfill(3)
-dfs_merged['KELOMPOK'] = dfs_merged['KELOMPOK'].astype(str).str.zfill(2)
+    dfs_merged['CENTER'] = dfs_merged['CENTER'].astype(str).str.zfill(3)
+    dfs_merged['KELOMPOK'] = dfs_merged['KELOMPOK'].astype(str).str.zfill(2)
 
 # Download links for pivot tables
     for name, df in {
