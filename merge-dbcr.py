@@ -7,7 +7,7 @@ st.title('Aplikasi Penggabungan Simpanan dan Pinjaman')
 st.divider()
 st.caption("Catatan:")
 st.caption("Pengolahan ini digunakan untuk menyatukan antara simpanan dan pinjaman")
-st.caption("Dipastikan pivot_pinjaman_na.xlsx isinya sudah di satukan dengan pivot_pinjaman.xlsx ")
+st.caption(":red[Dipastikan pivot_pinjaman_na.xlsx isinya sudah di satukan dengan pivot_pinjaman.xlsx]")
 st.divider()
 
 st.subheader("File Yang Dibutuhkan:")
