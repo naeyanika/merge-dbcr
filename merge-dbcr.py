@@ -4,8 +4,16 @@ import numpy as np
 import io
 
 st.title('Aplikasi Penggabungan Simpanan dan Pinjaman')
-st.write("""Gabungkan file simpanan dan pinjaman ( yang sudah digabungkan dan pinjaman N/A)""")
-st.write("""Format file harus berektensi xlsx dan nama nya tidak usah di ubah tetap (pivot_simpanan.xlsx dan pivot_pinjaman.xlsx)""")
+st.divider()
+st.caption("Catatan:")
+st.caption("Pengolahan ini digunakan untuk menyatukan antara simpanan dan pinjaman")
+st.caption("Dipastikan pivot_pinjaman_na.xlsx isinya sudah di satukan dengan pivot_pinjaman.xlsx ")
+st.divider()
+
+st.subheader("File Yang Dibutuhkan:")
+st.write("1. pivot_simpanan.xlsx")
+st.write("2. pivot_pinjaman.xlsx")
+
 
 uploaded_files = st.file_uploader("Unggah file Excel", accept_multiple_files=True, type=["xlsx"])
 
